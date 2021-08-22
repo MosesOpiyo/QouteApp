@@ -21,6 +21,11 @@ export class QouteListComponent implements OnInit {
       this.qoutes.splice(index,1);
     }
   }
+  addNewQoute(qoute){
+    let qouteLength = this.qoutes.length;
+    qoute.id = qouteLength+1;
+    this.qoutes.push(qoute)
+  }
 
   constructor() {}
 

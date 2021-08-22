@@ -1,8 +1,12 @@
 <link rel="stylesheet" href="qoute-list.component.css">
 <div *ngFor='let qoute of qoutes;let i = index'>
-    <h2>{{qoute.name}}</h2>
-    <app-qoute-detail *ngIf='qoute.showDescription' [qoute]='qoute' (isUseless)='uselessQoute($event,i)'></app-qoute-detail>
-    <button (click)='toggleDetails(i)'>Details</button>
+    <div class="qoute-content">
+        <h2>{{qoute.name}}</h2>
+        <app-qoute-detail *ngIf='qoute.showDescription' [qoute]='qoute' (isUseless)='uselessQoute($event,i)'></app-qoute-detail>
+        <button (click)='toggleDetails(i)'>Details</button>
+    </div>
+
 
 
 </div>
+<app-qoute-form (addQoute)="addNewQoute($event)"></app-qoute-form>
