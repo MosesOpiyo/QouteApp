@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Qoute } from '../qoute';
 
 @Component({
@@ -8,6 +8,11 @@ import { Qoute } from '../qoute';
 })
 export class QouteDetailComponent implements OnInit {
   @Input () qoute:Qoute
+  @Output () isUseless = new EventEmitter<boolean>();
+
+  qouteUseless(useless:boolean){
+    this.isUseless.emit(useless);
+  }
 
   constructor() { }
 

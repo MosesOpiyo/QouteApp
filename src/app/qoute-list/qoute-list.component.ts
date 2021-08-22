@@ -16,6 +16,11 @@ export class QouteListComponent implements OnInit {
     this.qoutes[index].showDescription = !this.qoutes[index].showDescription;
 
   }
+  uselessQoute(isUseless,index){
+    if(isUseless){
+      this.qoutes.splice(index,1);
+    }
+  }
 
   constructor() {}
 
