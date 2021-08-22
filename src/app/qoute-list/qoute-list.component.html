@@ -5,7 +5,17 @@
             <div class="qoute-content">
                 <h2>{{qoute.name}}</h2>
                 <app-qoute-detail *ngIf='qoute.showDescription' [qoute]='qoute' (isUseless)='uselessQoute($event,i)'></app-qoute-detail>
-                <button (click)='toggleDetails(i)'>Details</button>
+                <div class="row">
+                    <div class="col">
+                        <button (click)='toggleDetails(i)'>Details</button>
+                    </div>
+                    <div class="col">
+                        <button (click)="upVoteQoute(i)">upvote</button>
+                        <h5>{{qoute.upVote}}</h5>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 

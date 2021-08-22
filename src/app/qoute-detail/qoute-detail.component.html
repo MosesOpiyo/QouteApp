@@ -1,3 +1,17 @@
 <link rel="styleSheet" href="qoute-detail.component.css">
 <li>{{qoute.description}}</li>
-<button (click)='qouteUseless(true)'>Delete</button>
+<div class="row">
+    <div class="col">
+        <button (click)='qouteUseless(true)'>Delete</button>
+
+    </div>
+    <div class="col">
+        <button (click)="upVoteQoute(i)">upvote</button>
+        <h5>{{qoute.upVote}}</h5>
+
+    </div>
+    <div class="col">
+        <button (click)="downVoteQoute(i)">downvote</button>
+
+    </div>
+</div>

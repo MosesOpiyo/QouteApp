@@ -26,6 +26,10 @@ export class QouteListComponent implements OnInit {
     qoute.id = qouteLength+1;
     this.qoutes.push(qoute)
   }
+  upVoteQoute(index:number){
+    
+  }
+  
 
   constructor() {}
 
