@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="qoute-list.component.css">
-<h2 *ngFor='let qoute of qoutes'>
-    {{qoute.name}}
-    <app-qoute-detail [qoute]='qoute'></app-qoute-detail>
+<div *ngFor='let qoute of qoutes;let i = index'>
+    <h2>{{qoute.name}}</h2>
+    <app-qoute-detail *ngIf='qoute.showDescription' [qoute]='qoute'></app-qoute-detail>
+    <button (click)='toggleDetails(i)'>Show Details</button>
 
-</h2>
+</div>
