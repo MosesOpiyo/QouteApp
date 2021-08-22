@@ -1,17 +1,20 @@
 <link rel="styleSheet" href="qoute-detail.component.css">
 <li>{{qoute.description}}</li>
 <div class="row">
-    <div class="col">
-        <button (click)='qouteUseless(true)'>Delete</button>
+    <div *ngFor='let i = index'>
+        <div class="col">
+            <button (click)='qouteUseless(true)'>Delete</button>
 
+        </div>
+        <div class="col">
+            <button (click)=upVote(i)>upvote</button>
+            <p>{{qoute.upVote}}</p>
+        </div>
+        <div class="col">
+            <button (click)=downVote(i)>downvote</button>
+            <p>{{qoute.downVote}}</p>
+        </div>
     </div>
-    <div class="col">
-        <button (click)="upVoteQoute(i)">upvote</button>
-        <h5>{{qoute.upVote}}</h5>
 
-    </div>
-    <div class="col">
-        <button (click)="downVoteQoute(i)">downvote</button>
 
-    </div>
 </div>

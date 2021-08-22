@@ -19,9 +19,13 @@ export class QouteDetailComponent implements OnInit {
   qouteUseless(useless:boolean){
     this.isUseless.emit(useless);
   }
-  upVote(index:number){
-    this.qoutes[index].upVote+=1;
+  upVote(index){
+    this.qoutes[index].upVote +=1;
   }
+  downVote(index){
+    this.qoutes[index].downVote -=1;
+  }
+  
 
   constructor() { }
 

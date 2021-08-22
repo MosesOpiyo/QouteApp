@@ -11,6 +11,10 @@ button {
     background-color: blue;
 }
 
+.details {
+    margin-top: 45px;
+}
+
 .qoute-content {
     border: solid 2px black;
     margin-bottom: 20px;
