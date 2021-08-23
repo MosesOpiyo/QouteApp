@@ -1,5 +1,6 @@
 <link rel="styleSheet" href="qoute-detail.component.css">
 <li>{{qoute.description}}
+    <p>by {{qoute.author}}</p>
     <button (click)='qouteUseless(true)'>Delete</button>
     <div *ngFor='let i = index'>
 
